@@ -10,25 +10,25 @@ global.APIKeys = {
 }
 
 //---------( SETTING )---------//
-global.owner = ['6282279915237','6285789004732','6285724706876']
-global.premium = ['6282279915237']
-global.ownernomer = '6282279915237'
-global.ownername = 'Lexxy Official'
-global.botname = 'KaguraMD'
-global.footer = 'Lexxy Official'
+global.owner = ['62895326205615','62895326205615','62895326205615']
+global.premium = ['62895326205615']
+global.ownernomer = '62895326205615'
+global.ownername = 'WrannGamteng⚘'
+global.botname = 'WranBotz'
+global.footer = 'Wranzzz'
 global.thumb = fs.readFileSync('./image/fake.jpg')
 global.veloriy = fs.readFileSync('./image/kagura.mp4')
 global.sessionName = 'session'
-global.packname = '© BotWa'
-global.author = '2022'
+global.packname = 'Wranzzz⸙'
+global.author = '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'
 global.sp = '⭔'
 
 //---------( INFO )---------//
-global.youtube = 'https://youtube.com/c/LEX4YOUU'
-global.ig = 'https://instagram.com/Lexxy24'
-global.mygc = 'https://chat.whatsapp.com/CRY23lVKmXB7sCMhHmcwVw'
-global.myweb = 'https://github.com/Lexxy24'
-global.email = 'pebrikito0@gmail.com'
+global.youtube = 'https://vt.tiktok.com/ZSdQnpGs1/'
+global.ig = 'https://wa.me/62895326205715'
+global.mygc = 'https://chat.whatsapp.com/E5lPT7myQ8xFe5tLoR2GY7'
+global.myweb = 'https://wa.me/62895326205615'
+global.email = 'wrangamteng404@gmail.com'
 global.region = 'indonesia'
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.BgWelcLeav = 'https://telegra.ph/file/ca207893ae26d531cd9c6.jpg'
@@ -45,14 +45,14 @@ global.flasmurf = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutp
 
 //---------( MESSAGES )---------//
 global.mess = {
-success: '_Done._',
+success: '_Done.Jangan lupa follow tiktok @hengkerwbu9_',
 admin: '_Fitur Khusus Admin Group!_',
 botAdmin: '_Bot Harus Menjadi Admin Terlebih Dahulu!_',
 owner: '_Fitur Khusus Owner Bot_',
 group: '_Fitur Digunakan Hanya Untuk Group!_',
 private: '_Fitur Digunakan Hanya Untuk Private Chat!_',
 bot: '_Fitur Khusus Pengguna Nomor Bot_',
-wait: '_Sedang Di Proses..._',
+wait: '_Sabar Tod..._',
 error: '_Fitur Sedang Error!_',
 endLimit: '_Limit Harian Anda Telah Habis, Limit Akan Direset Setiap Jam 12_',
 }

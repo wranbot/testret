@@ -85,13 +85,13 @@ const isAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
 const isPremium = isCreator || global.premium.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
 
 // Fake
-const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 2021,status: 200, thumbnail: thumb, surface: 200, message: `© ${ownername}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-const fdoc = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `© ${ownername}`,jpegThumbnail: thumb}}}
+const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 2021,status: 200, thumbnail: thumb, surface: 200, message: `W r a n G a m t e n g ㍍`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+const fdoc = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `W r a n G a m t e n g ㍍`,jpegThumbnail: thumb}}}
 const fvn = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: { "audioMessage": {"mimetype":"audio/ogg; codecs=opus","seconds":359996400,"ptt": "true"}} } 
-const fgif = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})},message: {"videoMessage": { "title":`© ${ownername}`, "h": `Hmm`,'seconds': '359996400', 'gifPlayback': 'true', 'caption': `© ${ownername}`, 'jpegThumbnail': thumb}}}
-const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `© ${ownername}`, 'jpegThumbnail': thumb}}}
+const fgif = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})},message: {"videoMessage": { "title":`W r a n G a m t e n g ㍍`, "h": `Hmm`,'seconds': '359996400', 'gifPlayback': 'true', 'caption': `W r a n G a m t e n g ㍍`, 'jpegThumbnail': thumb}}}
+const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `W r a n G a m t e n g ㍍`, 'jpegThumbnail': thumb}}}
 const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`${pushname}`, "h": `Hmm`,'seconds': '359996400', 'caption': `${pushname}`, 'jpegThumbnail': thumb}}}
-const floc = {key : {participant : '0@s.whatsapp.net'},message: {locationMessage: {name: `${ownername}`,jpegThumbnail: thumb}}}
+const floc = {key : {participant : '0@s.whatsapp.net'},message: {locationMessage: {name: `W r a n G a m t e n g ㍍`,jpegThumbnail: thumb}}}
 const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': thumb, thumbnail: thumb,sendEphemeral: true}}}
 
 // Reply
@@ -1274,12 +1274,12 @@ for (let i of anu) {
 await sleep(1500)
 let btn = [{
 urlButton: {
-displayText: 'YouTube Creator',
+displayText: 'Tiktok Creator',
 url: `${youtube}`
 }
 }, {
 urlButton: {
-displayText: `Github`,
+displayText: `OwnerGamteng`,
 url: `${myweb}`
 }
 }, {
@@ -1308,12 +1308,12 @@ for (let yoi of anu) {
 await sleep(1500)
 let btn = [{
 urlButton: {
-displayText: 'YouTube Creator',
+displayText: 'Tiktok Creator',
 url: `${youtube}`
 }
 }, {
 urlButton: {
-displayText: `Github`,
+displayText: `OwnerGamteng`,
 url: `${myweb}`
 }
 }, {
@@ -1786,7 +1786,7 @@ let gam = await getBuffer(data[0].thumbnail.replace('https://www.anime-planet.co
 var but = [
 {
 "urlButton": {
-"displayText": `Github`,
+"displayText": `OwnerGamteng`,
 "url": `${myweb}`
 }
 }
@@ -1811,7 +1811,7 @@ let gam = await getBuffer(data[0].thumbnail.replace('https://www.anime-planet.co
 var but = [
 {
 "urlButton": {
-"displayText": `Github`,
+"displayText": `OwnerGamteng`,
 "url": `${myweb}`
 }
 }
@@ -1835,7 +1835,7 @@ let gam = await getBuffer(data[0].thumbnail.replace('https://www.anime-planet.co
 var but = [
 {
 "urlButton": {
-"displayText": `Github`,
+"displayText": `OwnerGamteng`,
 "url": `${myweb}`
 }
 }
@@ -2545,13 +2545,13 @@ if (!text) throw 'Masukkan Query Link!'
 reply(mess.wait)
 let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
 let buttons = [
-{buttonId: `tiktokwm ${text}`, buttonText: {displayText: '► With Watermark'}, type: 1},
+{buttonId: `tiktokwm ${text}`, buttonText: {displayText: '► Ada logo tiktok'}, type: 1},
 {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: '♫ Audio'}, type: 1}
 ]
 let buttonMessage = {
 video: { url: anu.result.nowatermark },
-caption: `Download From ${text}`,
-footer: 'Press The Button Below',
+caption: `Tiktok Nowatermark`,
+footer: 'Wranzzz⚘',
 buttons: buttons,
 headerType: 5
 }
@@ -2563,13 +2563,13 @@ if (!text) throw 'Masukkan Query Link!'
 reply(mess.wait)
 let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
 let buttons = [
-{buttonId: `tiktoknowm ${text}`, buttonText: {displayText: '► No Watermark'}, type: 1},
+{buttonId: `tiktoknowm ${text}`, buttonText: {displayText: '► Gk ada logo tiktok'}, type: 1},
 {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: '♫ Audio'}, type: 1}
 ]
 let buttonMessage = {
 video: { url: anu.result.watermark },
-caption: `Download From ${text}`,
-footer: 'Press The Button Below',
+caption: `Tiktok Watermark`,
+footer: 'Wranzzz⚘',
 buttons: buttons,
 headerType: 5
 }
@@ -2581,12 +2581,12 @@ if (!text) throw 'Masukkan Query Link!'
 reply(mess.wait)
 let anu = await fetchJson(api('zenz', '/downloader/musically', { url: text }, 'apikey'))
 let buttons = [
-{buttonId: `tiktoknowm ${text}`, buttonText: {displayText: '► No Watermark'}, type: 1},
-{buttonId: `tiktokwm ${text}`, buttonText: {displayText: '► With Watermark'}, type: 1}
+{buttonId: `tiktoknowm ${text}`, buttonText: {displayText: '► Gk ada logo tiktok'}, type: 1},
+{buttonId: `tiktokwm ${text}`, buttonText: {displayText: '► Ada logo tiktok'}, type: 1}
 ]
 let buttonMessage = {
-text: `Download From ${text}`,
-footer: 'Press The Button Below',
+text: `Tiktok Audio`,
+footer: 'Wranzzz⚘',
 buttons: buttons,
 headerType: 2
 }
@@ -3098,7 +3098,7 @@ templateButtons: [
 {
 index: 1, 
 urlButton: {
-displayText: 'YouTube Creator', 
+displayText: 'Tiktok Creator', 
 url: `${youtube}`
 }
 },
@@ -3116,7 +3116,7 @@ templateButtons: [
 {
 index: 1, 
 urlButton: {
-displayText: 'YouTube Creator', 
+displayText: 'Tiktok Creator', 
 url: `${youtube}`
 }
 },
@@ -3133,7 +3133,7 @@ templateButtons: [
 {
 index: 1, 
 urlButton: {
-displayText: 'YouTube Creator', 
+displayText: 'Tiktok Creator', 
 url: `${youtube}`
 }
 },
@@ -3298,10 +3298,10 @@ reply("Succes Mengganti Menu "+q)
 break
 case 'menu': {
 if(typemenu == 'allmenu'){
-await kagura.send5ButImg(from, `` + '' + lang.menu(botname, pushname, salam, ownername, time, tanggal), `Wade in Indonesia, Palembang 🇲🇨`,thumb, [{"urlButton": {"displayText": "YouTube Creator","url": `${youtube}`}},{"urlButton": {"displayText": `Github`,"url": `${myweb}`}},{"quickReplyButton": {"displayText": "Owner","id": 'owner'}},{"quickReplyButton": {"displayText": "Donasi","id": 'donate'}}] )
+await kagura.send5ButImg(from, `` + '' + lang.menu(botname, pushname, salam, ownername, time, tanggal), `© WrannGamteng⸙`,thumb, [{"urlButton": {"displayText": "Tiktok Creator","url": `${youtube}`}},{"urlButton": {"displayText": `OwnerGamteng`,"url": `${myweb}`}},{"quickReplyButton": {"displayText": "Owner","id": 'owner'}},{"quickReplyButton": {"displayText": "Donasi","id": 'donate'}}] )
 }
 if(typemenu == 'simple'){
-await kagura.send5ButImg(from, `` + '' + lang.menusimpel(botname, pushname, salam, ownername, time, tanggal), `Wade in Indonesia, Palembang 🇲🇨`,thumb, [{"urlButton": {"displayText": "YouTube Creator","url": `${youtube}`}},{"urlButton": {"displayText": `Github`,"url": `${myweb}`}},{"quickReplyButton": {"displayText": "Owner","id": 'owner'}},{"quickReplyButton": {"displayText": "Donasi","id": 'donate'}}] )
+await kagura.send5ButImg(from, `` + '' + lang.menusimpel(botname, pushname, salam, ownername, time, tanggal), `© WrannGamteng⸙`,thumb, [{"urlButton": {"displayText": "YouTube Creator","url": `${youtube}`}},{"urlButton": {"displayText": `OwnerGamteng`,"url": `${myweb}`}},{"quickReplyButton": {"displayText": "Owner","id": 'owner'}},{"quickReplyButton": {"displayText": "Donasi","id": 'donate'}}] )
 }
 }
 break
