@@ -484,6 +484,23 @@ user.afkReason = text
 reply(`${m.pushName} Telah Afk${text ? ': ' + text : ''}`)
 }
 break
+case 'bcallmedia': {
+            if (!isCreator) throw mess.owner
+            let anu = await store.chats.all().map(v => v.id)
+            m.reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
+            for (let i of anu) {
+
+            await sleep(1500)
+
+            kagura.copyNForward(i, quoted.fakeObj, false, {quoted:ftroli})
+
+            }
+
+            m.reply(`Sukses Mengirim Broadcast Ke ${anu.length} Chat`)
+
+            }
+           
+break
 case 'ttc': case 'ttt': case 'tictactoe': {
  if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) // respon ketika limit habis
  db.data.users[m.sender].limit -= 1 // -1 limit
