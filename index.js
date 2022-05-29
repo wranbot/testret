@@ -1428,6 +1428,23 @@ memek = await kagura.sendImageAsSticker(m.chat, meme, m, { packname: global.pack
 await fs.unlinkSync(memek)
 }
 break
+case 'donasi': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
+		let { quotesAnime } = require('./lib/scraper')
+                let anu = await quotesAnime()
+                result = anu[Math.floor(Math.random() * anu.length)]
+                let buttons = [
+                    {buttonId: `owner`, buttonText: {displayText: 'OWNER🌿'}, type: 1}
+                ]
+                let buttonMessage = {
+                    text: ` *Sewa bot?*\nHarga :\n» 25k permanen\n\n *Keuntungan sewa*\n» Bisa masuk grup\n» Fast respon\n» Run heroku\n» Sesuka kalian\n\n *PEMBAYARAN VIA DANA | GOPAY✓*\n\n *Minat? Hubungi Owner*\nhttps://wa.me/62895326205615`,
+                    footer: '© WrannGamteng',
+                    buttons: buttons,
+                    headerType: 2
+                }
+                kagura.sendMessage(m.chat, buttonMessage, { quoted: m })
+            }
+
+            break
 case 'gura':
 case 'gurastick':{
 var ano = await fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
@@ -3253,6 +3270,448 @@ capt += `⭔ Member Count: ${i.member_count}\n\n──────────�
 kagura.sendImage(m.chat, 'https://'+res.result[0].community_thumb, capt, m)
 }
 break
+case 'allmenu': case 'menuall': {
+                anu = `
+
+┌──⭓ *Group Menu*
+│
+│⭔ ${prefix}linkgroup
+│⭔ ${prefix}ephemeral [option]
+│⭔ ${prefix}setppgc [image]
+│⭔ ${prefix}setname [text]
+│⭔ ${prefix}setdesc [text]
+│⭔ ${prefix}group [option]
+│⭔ ${prefix}editinfo [option]
+│⭔ ${prefix}add @user
+│⭔ ${prefix}kick @user
+│⭔ ${prefix}hidetag [text]
+│⭔ ${prefix}tagall [text]
+│⭔ ${prefix}promote @user
+│⭔ ${prefix}demote @user
+│⭔ ${prefix}vote [text]
+│⭔ ${prefix}antilink [on/of]
+│⭔ ${prefix}antiyt [on/of]
+│⭔ ${prefix}antilinktt [on/of]
+│⭔ ${prefix}devote
+│⭔ ${prefix}upvote
+│⭔ ${prefix}cekvote
+│⭔ ${prefix}hapusvote
+│
+└───────⭓
+
+┌──⭓ *Downloader Menu*
+│
+│⭔ ${prefix}tiktoknowm [url]
+│⭔ ${prefix}tiktokwm [url]
+│⭔ ${prefix}tiktokmp3 [url]
+│⭔ ${prefix}instagram [url]
+│⭔ ${prefix}twitter [url]
+│⭔ ${prefix}twittermp3 [url]
+│⭔ ${prefix}facebook [url]
+│⭔ ${prefix}pinterestdl [url]
+│⭔ ${prefix}ytmp3 [url]
+│⭔ ${prefix}ytmp4 [url]
+│⭔ ${prefix}getmusic [query]
+│⭔ ${prefix}getvideo [query]
+│⭔ ${prefix}umma [url]
+│⭔ ${prefix}joox [query]
+│⭔ ${prefix}soundcloud [url]
+│
+└───────⭓
+
+┌──⭓ *Search Menu*
+│
+│⭔ ${prefix}play [query]
+│⭔ ${prefix}yts [query]
+│⭔ ${prefix}google [query]
+│⭔ ${prefix}gimage [query]
+│⭔ ${prefix}pinterest [query]
+│⭔ ${prefix}wallpaper [query]
+│⭔ ${prefix}wikimedia [query]
+│⭔ ${prefix}ytsearch [query]
+│⭔ ${prefix}ringtone [query]
+│
+└───────⭓
+
+┌──⭓ *Text Pro Menu*
+│
+│⭔ ${prefix}3dchristmas
+│⭔ ${prefix}3ddeepsea
+│⭔ ${prefix}americanflag
+│⭔ ${prefix}3dscifi
+│⭔ ${prefix}3drainbow
+│⭔ ${prefix}3dwaterpipe
+│⭔ ${prefix}halloweenskeleton
+│⭔ ${prefix}sketch
+│⭔ ${prefix}bluecircuit
+│⭔ ${prefix}space
+│⭔ ${prefix}metallic
+│⭔ ${prefix}fiction
+│⭔ ${prefix}greenhorror
+│⭔ ${prefix}transformer
+│⭔ ${prefix}berry
+│⭔ ${prefix}thunder
+│⭔ ${prefix}magma
+│⭔ ${prefix}3dcrackedstone
+│⭔ ${prefix}3dneonlight
+│⭔ ${prefix}impressiveglitch
+│⭔ ${prefix}naturalleaves
+│⭔ ${prefix}fireworksparkle
+│⭔ ${prefix}matrix
+│⭔ ${prefix}dropwater
+│⭔ ${prefix}harrypotter
+│⭔ ${prefix}foggywindow
+│⭔ ${prefix}neondevils
+│⭔ ${prefix}christmasholiday
+│⭔ ${prefix}3dgradient
+│⭔ ${prefix}blackpink
+│⭔ ${prefix}gluetext
+│⭔ ${prefix}3d-effect 
+│⭔ ${prefix}3d-rubystone 
+│⭔ ${prefix}3d-text-sub-zombie 
+│⭔ ${prefix}3dengraved 
+│⭔ ${prefix}3dgold 
+│⭔ ${prefix}3dgolden 
+│⭔ ${prefix}3dgradient 
+│⭔ ${prefix}3dgradient 
+│⭔ ${prefix}3dlove 
+│⭔ ${prefix}3dluxury 
+│⭔ ${prefix}3dneonlight 
+│⭔ ${prefix}3dpapercut 
+│⭔ ${prefix}3drainbow 
+│⭔ ${prefix}3drealistic 
+│⭔ ${prefix}3drosegold 
+│⭔ ${prefix}3dscifi 
+│⭔ ${prefix}3dsilver 
+│⭔ ${prefix}3dspace 
+│⭔ ${prefix}3dstone 
+│⭔ ${prefix}3dtext-effect 
+│⭔ ${prefix}3dunderwater 
+│⭔ ${prefix}3dvintage 
+│⭔ ${prefix}3dwaterpipe 
+│⭔ ${prefix}alice-league-of-kings 
+│⭔ ${prefix}angel-wing-galaxy 
+│⭔ ${prefix}anubis 
+│⭔ ${prefix}arch-crossfire 
+│⭔ ${prefix}art-shader 
+│⭔ ${prefix}assassins-creed 
+│⭔ ${prefix}avengers 
+│⭔ ${prefix}azzenka-league-of-kings 
+│⭔ ${prefix}balloons-cards 
+│⭔ ${prefix}balloons-love 
+│⭔ ${prefix}bearlogo 
+│⭔ ${prefix}bg-crossfire 
+│⭔ ${prefix}birthday-cake 
+│⭔ ${prefix}birthday-cards 
+│⭔ ${prefix}birthday-greeting 
+│⭔ ${prefix}birthday-roses 
+│⭔ ${prefix}black-metal 
+│⭔ ${prefix}blood-frosted 
+│⭔ ${prefix}blood-text 
+│⭔ ${prefix}blue-effect 
+│⭔ ${prefix}blue-glitter 
+│⭔ ${prefix}brickwall 
+│⭔ ${prefix}brokentext 
+│⭔ ${prefix}bulb-effect 
+│⭔ ${prefix}bubble-effect 
+│
+└───────⭓
+
+┌──⭓ *Photo Oxy Menu*
+│
+│⭔ ${prefix}shadow
+│⭔ ${prefix}romantic
+│⭔ ${prefix}smoke
+│⭔ ${prefix}burnpapper
+│⭔ ${prefix}naruto
+│⭔ ${prefix}lovemsg
+│⭔ ${prefix}grassmsg
+│⭔ ${prefix}lovetext
+│⭔ ${prefix}coffecup
+│⭔ ${prefix}butterfly
+│⭔ ${prefix}harrypotter
+│⭔ ${prefix}retrolol
+│⭔ ${prefix}shadow 
+│⭔ ${prefix}cup 
+│⭔ ${prefix}cup1 
+│⭔ ${prefix}burnpaper 
+│⭔ ${prefix}lovemessage 
+│⭔ ${prefix}undergrass 
+│⭔ ${prefix}woodheart
+│⭔ ${prefix}woodenboard 
+│⭔ ${prefix}wolfmetal 
+│⭔ ${prefix}nature3d 
+│⭔ ${prefix}underwater 
+│⭔ ${prefix}golderrose 
+│⭔ ${prefix}fallleaves 
+│⭔ ${prefix}flamming 
+│⭔ ${prefix}harrypotter
+│
+└───────⭓
+
+┌──⭓ *Ephoto Menu*
+│
+│⭔ ${prefix}ffcover
+│⭔ ${prefix}crossfire
+│⭔ ${prefix}galaxy
+│⭔ ${prefix}glass
+│⭔ ${prefix}neon
+│⭔ ${prefix}beach
+│⭔ ${prefix}blackpink
+│⭔ ${prefix}igcertificate
+│⭔ ${prefix}ytcertificate
+│⭔ ${prefix}wetglass 
+│⭔ ${prefix}multicolor3d 
+│⭔ ${prefix}watercolor 
+│⭔ ${prefix}luxurygold 
+│⭔ ${prefix}galaxywallpaper 
+│⭔ ${prefix}lighttext 
+│⭔ ${prefix}beautifulflower 
+│⭔ ${prefix}royaltext 
+│⭔ ${prefix}heartshaped 
+│⭔ ${prefix}birdhdaycake 
+│⭔ ${prefix}galaxystyle 
+│⭔ ${prefix}hologram3d 
+│⭔ ${prefix}greenneon 
+│⭔ ${prefix}glossychrome 
+│⭔ ${prefix}greenbush 
+│⭔ ${prefix}metallogo 
+│⭔ ${prefix}neoltext 
+│⭔ ${prefix}glittergold 
+│⭔ ${prefix}textcake 
+│⭔ ${prefix}startsnight 
+│⭔ ${prefix}wooden3d 
+│⭔ ${prefix}textbyname 
+│⭔ ${prefix}writegalacy 
+│⭔ ${prefix}galaxybat 
+│⭔ ${prefix}snow3d 
+│⭔ ${prefix}birthdayday 
+│⭔ ${prefix}silverplaybutton 
+│⭔ ${prefix}cartoongravity 
+│⭔ ${prefix}anonymhacker 
+│⭔ ${prefix}mlwall 
+│⭔ ${prefix}pubgmaskot 
+│⭔ ${prefix}aovwall 
+│⭔ ${prefix}logogaming 
+│⭔ ${prefix}fpslogo 
+│⭔ ${prefix}avatarlolnew 
+│⭔ ${prefix}lolbanner 
+│⭔ ${prefix}avatardota 
+│⭔ ${prefix}juventusshirt 
+│⭔ ${prefix}cutegravity 
+│⭔ ${prefix}realvintage 
+│⭔ ${prefix}codwarzone 
+│⭔ ${prefix}valorantbanner
+│
+└───────⭓
+
+┌──⭓ *Fun Menu*
+│
+│⭔ ${prefix}apakah
+│⭔ ${prefix}kapan
+│⭔ ${prefix}halah
+│⭔ ${prefix}hilih
+│⭔ ${prefix}huluh
+│⭔ ${prefix}heleh
+│⭔ ${prefix}holoh
+│⭔ ${prefix}jadian
+│⭔ ${prefix}jodohku
+│⭔ ${prefix}delttt
+│⭔ ${prefix}tictactoe
+│⭔ ${prefix}family100
+│⭔ ${prefix}tebak [option]
+│⭔ ${prefix}math [mode]
+│⭔ ${prefix}suitpvp [@tag]
+│
+└───────⭓
+
+┌──⭓ *Primbon Menu*
+│
+│⭔ ${prefix}nomorhoki
+│⭔ ${prefix}artimimpi
+│⭔ ${prefix}artinama
+│⭔ ${prefix}ramaljodoh
+│⭔ ${prefix}ramaljodohbali
+│⭔ ${prefix}suamiistri
+│⭔ ${prefix}ramalcinta
+│⭔ ${prefix}cocoknama
+│⭔ ${prefix}pasangan
+│⭔ ${prefix}jadiannikah
+│⭔ ${prefix}sifatusaha
+│⭔ ${prefix}rezeki
+│⭔ ${prefix}pekerjaan
+│⭔ ${prefix}nasib
+│⭔ ${prefix}penyakit
+│⭔ ${prefix}tarot
+│⭔ ${prefix}fengshui
+│⭔ ${prefix}haribaik
+│⭔ ${prefix}harisangar
+│⭔ ${prefix}harisial
+│⭔ ${prefix}nagahari
+│⭔ ${prefix}arahrezeki
+│⭔ ${prefix}peruntungan
+│⭔ ${prefix}weton
+│⭔ ${prefix}karakter
+│⭔ ${prefix}keberuntungan
+│⭔ ${prefix}memancing
+│⭔ ${prefix}masasubur
+│⭔ ${prefix}zodiak
+│⭔ ${prefix}shio
+│
+└───────⭓
+
+┌──⭓ *Convert Menu*
+│
+│⭔ ${prefix}ssweb
+│⭔ ${prefix}toimage
+│⭔ ${prefix}removebg
+│⭔ ${prefix}smeme
+│⭔ ${prefix}sticker
+│⭔ ${prefix}emojimix
+│⭔ ${prefix}tovideo
+│⭔ ${prefix}togif
+│⭔ ${prefix}tourl
+│⭔ ${prefix}tovn
+│⭔ ${prefix}tomp3
+│⭔ ${prefix}toaudio
+│⭔ ${prefix}ebinary
+│⭔ ${prefix}dbinary
+│⭔ ${prefix}styletext
+│
+└───────⭓
+
+┌──⭓ *Main Menu*
+│
+│⭔ ${prefix}ping
+│⭔ ${prefix}owner
+│⭔ ${prefix}menu / ${prefix}help / ${prefix}?
+│⭔ ${prefix}delete
+│⭔ ${prefix}infochat
+│⭔ ${prefix}quoted
+│⭔ ${prefix}listpc
+│⭔ ${prefix}listgc
+│⭔ ${prefix}listonline
+│
+└───────⭓
+
+┌──⭓ *Database Menu*
+│
+│⭔ ${prefix}setcmd
+│⭔ ${prefix}listcmd
+│⭔ ${prefix}delcmd
+│⭔ ${prefix}lockcmd
+│⭔ ${prefix}addmsg
+│⭔ ${prefix}listmsg
+│⭔ ${prefix}getmsg
+│⭔ ${prefix}delmsg
+│
+└───────⭓
+
+┌──⭓ *Anonymous Menu*
+│
+│⭔ ${prefix}anonymous
+│⭔ ${prefix}start
+│⭔ ${prefix}next
+│⭔ ${prefix}keluar
+│⭔ ${prefix}sendkontak
+│
+└───────⭓
+
+┌──⭓ *Islamic Menu*
+│
+│⭔ ${prefix}iqra
+│⭔ ${prefix}hadist
+│⭔ ${prefix}alquran
+│⭔ ${prefix}juzamma
+│⭔ ${prefix}tafsirsurah
+│
+└───────⭓
+
+┌──⭓ *Voice Changer*
+│
+│⭔ ${prefix}bass
+│⭔ ${prefix}blown
+│⭔ ${prefix}deep
+│⭔ ${prefix}earrape
+│⭔ ${prefix}fast
+│⭔ ${prefix}fat
+│⭔ ${prefix}nightcore
+│⭔ ${prefix}reverse
+│⭔ ${prefix}robot
+│⭔ ${prefix}slow
+│⭔ ${prefix}tupai
+│
+└───────⭓
+
+┌──⭓ *Owner Menu*
+│
+│⭔ ${prefix}chat [option]
+│⭔ ${prefix}join [link]
+│⭔ ${prefix}leave
+│⭔ ${prefix}block @user
+│⭔ ${prefix}unblock @user
+│⭔ ${prefix}bcgroup [text]
+│⭔ ${prefix}bcall [text]
+│⭔ ${prefix}bcallmedia
+│⭔ ${prefix}setppbot [image]
+│
+└───────⭓
+
+┌──⭓ *Tqto*
+│
+│⭔ ${prefix}OrtuSaya.
+│⭔ ${prefix}DikaArdnt. 
+│⭔ ${prefix}Sanzy YT.
+│⭔ ${prefix}Zeeone Ofc. 
+│⭔ ${prefix}Fatih A. 
+│⭔ ${prefix}Narutomo. 
+│⭔ ${prefix}Mhankbarbar. 
+│⭔ ${prefix}Penyedia Module.
+│⭔ ${prefix}Wranzzz.
+│⭔ ${prefix}Taristaa.
+│⭔ ${prefix}All My Friends.
+│
+└───────⭓`
+                let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/hisoka.jpg') }, { upload: hisoka.waUploadToServer })
+           const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            hydratedContentText: anu,
+                            locationMessage: {
+                            jpegThumbnail: fs.readFileSync('./media/fake.jpg')},
+                            hydratedFooterText: `© WranGamteng`,
+                            hydratedButtons: [{
+                                urlButton: {
+                                    displayText: 'Tiktok Creator',
+                                    url: 'https://vm.tiktok.com/ZSd86F9BW/'
+                                }
+                            }, {
+                                callButton: {
+                                    displayText: 'Number Phone Owner',
+                                    phoneNumber: global.owner[0]
+                                }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'PING',
+                                    id: 'ping'
+                                }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'OWNER',
+                                    id: 'owner'
+                                }  
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'SEWA BOT',
+                                    id: 'sewa'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat })
+                kagura.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+             break
 case 'wattpad': {
 if (!q) return reply(`Example : ${prefix + command} love`)
 reply(mess.wait)
@@ -3298,121 +3757,143 @@ capt += `⭔ Thumbnail Url: ${i.thumbnail}\n\n───────────�
 kagura.sendImage(m.chat, res.result[0].thumbnail, capt, m)
 }
 break
-// SET MENU & ALL MENU
-case "setmenu": 
-if (!isCreator) return reply(mess.owner)
-if (!text) return reply("1.allmenu\n2.simpel\n\nContoh .setmenu simpel")
-// Menu All
-if (q == "allmenu") {
-typemenu = 'allmenu'
-reply("Succes Mengganti Menu "+q)
+case 'command':{
+let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                listMessage :{
+                    title: `Haloo Kak ${pushname} 😊`,
+                    description: "Silahkan pilih...\nMedia apa yang kamu suka>_<",
+                    buttonText: "CLICK DISINI",
+                    footerText: "\n\nNOTE!!!\nJANGAN SPAM YAA ADICK-ADICK.",
+                    listType: "SINGLE_SELECT",
+                    sections: [{
+								"title": "allmenu",
+								"rows": [
+									{
+										"title": "All Menu☕",
+										"description": "Menampilkan Semua Fitur Bot",
+										"rowId": 'allmenu'
+									}
+								]
+							},
+							{
+								"title": "Bot Menu",
+								"rows": [
+									{
+										"title": "Sewa Bot💰",
+										"description": "Lihat Keuntungan Sewa Bot",
+										"rowId": 'sewa'
+									},
+									{
+										"title": "Peraturan Bot📑",
+										"description": "Lihat Apa Saja Yang Harus Kita Patuhi",
+										"rowId": 'rules'
+									},
+									{
+										"title": "Thanks To📸",
+										"description": "Teman-Teman Yang Sudah Membantu Saya Membuat Bot Ini",
+										"rowId": 'tqto'
+										}
+								]
+							},
+							{
+								"title": "Pemilik Bot",
+								"rows": [
+									{
+										"title": "Pemilik Bot",
+										"description": "Klik Untuk Melihat Siapa Yg Buat Ini Bot",
+										"rowId": 'owner'
+									}
+								]
+							}
+						],
+          listType: 1
+                }
+            }), { userJid: m.chat, quoted: ftroli })
+            kagura.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break
+case 'list': case 'menu': case 'help': case '?': {
+                anu = `Haii Kak ${pushname} Selamat ${salam}
+
+Saya ${global.namabot}, Bot Ini Adalah Beta Multi-Device WhatsApp.
+Jika Kamu Menemukan Semacam Bug Atau Kesalahan Mohon Dimaklumi Dulu Ya, Lapor Owner Agar Segera Di Perbaiki🙏
+
+ *Jam Indonesia*
+• Wib : ${wib}
+• Wit : ${wit}
+• Wita : ${wita}`
+                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            hydratedContentText: anu,
+                            locationMessage: {
+                            jpegThumbnail: fs.readFileSync('./lib/hisoka.jpg')},
+                            hydratedFooterText: `©WrannGamteng`,
+                            hydratedButtons: [{
+                                quickReplyButton: {
+                                    displayText: 'LIST MENU🐼',
+                                    id: 'command'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat })
+                kagura.relayMessage(m.chat, template.message, { messageId: template.key.id })
+           
 }
-// Menu Simple
-else if (q == "simpel") {
-typemenu = 'simple'
-reply("Succes Mengganti Menu "+q)
-}
-break
-case 'menu': {
-if(typemenu == 'allmenu'){
-await kagura.send5ButImg(from, `` + '' + lang.menu(botname, pushname, salam, ownername, time, tanggal), `© WrannGamteng⸙`,thumb, [{"urlButton": {"displayText": "Tiktok Creator","url": `${youtube}`}},{"urlButton": {"displayText": `OwnerGamteng`,"url": `${myweb}`}},{"quickReplyButton": {"displayText": "Owner","id": 'owner'}},{"quickReplyButton": {"displayText": "Donasi","id": 'donate'}}] )
-}
-if(typemenu == 'simple'){
-await kagura.send5ButImg(from, `` + '' + lang.menusimpel(botname, pushname, salam, ownername, time, tanggal), `© WrannGamteng⸙`,thumb, [{"urlButton": {"displayText": "YouTube Creator","url": `${youtube}`}},{"urlButton": {"displayText": `OwnerGamteng`,"url": `${myweb}`}},{"quickReplyButton": {"displayText": "Owner","id": 'owner'}},{"quickReplyButton": {"displayText": "Donasi","id": 'donate'}}] )
-}
-}
-break
-case 'menu1':
-case 'groupmenu':
-reply(`${(lang.groupmenu(prefix))}`)
-break
-case 'menu2':
-case 'downloadermenu':
-reply(`${(lang.downloadermenu(prefix))}`)
-break
-case 'menu3':
-case 'searchmenu':
-reply(`${(lang.searchmenu(prefix))}`)
-break
-case 'menu4':
-case 'telestickmenu':
-reply(`${(lang.telestickmenu(prefix))}`)
-break
-break
-case 'menu5':
-case 'randommenu':
-reply(`${(lang.randommenu(prefix))}`)
-break
-case 'menu6':
-case 'randomanimemenu':
-reply(`${(lang.randomanimemenu(prefix))}`)
-break
-case 'menu7':
-case 'searchmenu':
-reply(`${(lang.searchmenu(prefix))}`)
-break
-case 'menu8':
-case 'textpromenu':
-reply(`${(lang.textpromenu(prefix))}`)
-break
-case 'menu9':
-case 'photooxymenu':
-reply(`${(lang.photooxymenu(prefix))}`)
-break
-case 'menu10':
-case 'ephotomenu':
-reply(`${(lang.ephotomenu(prefix))}`)
-break
-case 'menu11':
-case 'funmenu':
-reply(`${(lang.funmenu(prefix))}`)
-break
-case 'menu12':
-case 'primbonmenu':
-reply(`${(lang.primbonmenu(prefix))}`)
-break
-case 'menu13':
-case 'cerpenmenu':
-reply(`${(lang.cerpenmenu(prefix))}`)
-break
-case 'menu14':
-case 'convertmenu':
-reply(`${(lang.convertmenu(prefix))}`)
-break
-case 'menu15':
-case 'informationmenu':
-reply(`${(lang.informationmenu(prefix))}`)
-break
-case 'menu16':
-case 'mainmenu':
-reply(`${(lang.mainmenu(prefix))}`)
-break
-case 'menu17':
-case 'databasemenu':
-reply(`${(lang.groupmenu(prefix))}`)
-break
-case 'menu18':
-case 'anonymousmenu':
-reply(`${(lang.anonymousmenu(prefix))}`)
-break
-case 'menu19':
-case 'islamicmenu':
-reply(`${(lang.islamicmenu(prefix))}`)
-break
-case 'menu20':
-case 'voicechargermenu':
-reply(`${(lang.voicechargermenu(prefix))}`)
-break
-case 'menu21':
-case 'ownermenu':
-reply(`${(lang.ownermenu(prefix))}`)
-break
-case 'donasi': case 'donate':
-reply(`${(lang.donasi(ownernomer))}`)
-break
-case 'thanksto': case 'tqto':
-reply(`${(lang.thanksto())}`)
-break
+           break
+case 'tqtt': case 'tqto': case 'thanksto': {
+                anu = `
+⭔ Ortu Saya.
+⭔ DikaArdnt (Author).
+⭔ Lexxy Ofc.
+⭔ Sanzy YT.
+⭔ Fatih A.
+⭔ Nurutomo.
+⭔ Mhankbarbar.
+⭔ ZeeoneOfc.
+⭔ Penyedia Module.
+⭔ Penyedia Res Api's.
+⭔ WranzzZ.
+⭔ Taristaaa.
+⭔ All My Friends.
+
+• Library : *Baileys-MD*.
+• Prefix : ( ${prefix} )
+• Waktu Server : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}
+• Tanggal Server : ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}
+• Wib : ${wib}
+• Wit : ${wit}
+• Wita : ${wita}`
+                let button = [{
+                                urlButton: {
+                                    displayText: 'Tiktok Creator',
+                                    url: global.myweb
+                                }
+                            }, {
+                                callButton: {
+                                    displayText: 'Number Phone Owner',
+                                    phoneNumber: global.owner[0]
+                                }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'Rules',
+                                    id: 'rules'
+                                }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'Owner',
+                                    id: 'owner'
+                                }  
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'List Menu',
+                                    id: 'command'
+                                }
+                            }]
+                kagura.send5ButImg(m.chat, anu, hisoka.user.name, global.thumb, button)
+            }
+            break
 // BATAS
 default:
 if (budy.startsWith('=>')) {
